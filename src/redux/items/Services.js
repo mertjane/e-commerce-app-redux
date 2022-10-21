@@ -4,7 +4,7 @@ import axios from "axios";
 export const getProductsAsync = createAsyncThunk(
   "items/getProducts",
   async () => {
-    const res = await axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}`);
+    const res = await axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/items`);
     return res.data;
   }
 );
@@ -13,7 +13,7 @@ export const sortLowToHighAsync = createAsyncThunk(
   "items/sortProducts",
   async () => {
     const res = await axios(
-      `${process.env.REACT_APP_API_BASE_ENDPOINT}/?_sort=price&_order=asc`
+      `${process.env.REACT_APP_API_BASE_ENDPOINT}/items?_sort=price&_order=asc`
     );
     return res.data;
   }
@@ -23,7 +23,7 @@ export const sortHighToLowAsync = createAsyncThunk(
   "items/sortProducts",
   async () => {
     const res = await axios(
-      `${process.env.REACT_APP_API_BASE_ENDPOINT}/?_sort=price&_order=desc`
+      `${process.env.REACT_APP_API_BASE_ENDPOINT}/items?_sort=price&_order=desc`
     );
     return res.data;
   }
@@ -33,7 +33,7 @@ export const sortNewToOldAsync = createAsyncThunk(
   "items/sortProducts",
   async () => {
     const res = await axios(
-      `${process.env.REACT_APP_API_BASE_ENDPOINT}/?_sort=added&_order=desc`
+      `${process.env.REACT_APP_API_BASE_ENDPOINT}/items?_sort=added&_order=desc`
     );
     return res.data;
   }
@@ -43,7 +43,7 @@ export const sortOldToNewAsync = createAsyncThunk(
   "items/sortProducts",
   async () => {
     const res = await axios(
-      `${process.env.REACT_APP_API_BASE_ENDPOINT}/?_sort=added&_order=asc`
+      `${process.env.REACT_APP_API_BASE_ENDPOINT}/items?_sort=added&_order=asc`
     );
     return res.data;
   }
@@ -54,7 +54,7 @@ export const filterByBrandsAsync = createAsyncThunk(
   "items/filterByBrands",
   async (selectedBrands) => {
     const res = await axios(
-      `${process.env.REACT_APP_API_BASE_ENDPOINT}/?manufacturer_like=${selectedBrands}`
+      `${process.env.REACT_APP_API_BASE_ENDPOINT}/items?manufacturer_like=${selectedBrands}`
     );
     return res.data;
   }
