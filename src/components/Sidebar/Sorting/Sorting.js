@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import {
   Wrapper,
@@ -16,7 +16,6 @@ import {
 
 const Sorting = () => {
   const dispatch = useDispatch();
-
 
   return (
     <Wrapper>
