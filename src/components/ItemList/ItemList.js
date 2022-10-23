@@ -13,7 +13,9 @@ let filtered = [];
 const ItemList = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.items.products);
-  const activeFilter = useSelector((state) => state.items.filteredItems.activeFilter);
+  const activeFilter = useSelector(
+    (state) => state.items.filteredItems.activeFilter
+  );
   const status = useSelector((state) => state.items.status);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +30,7 @@ const ItemList = () => {
   filtered = products;
   if (activeFilter !== "all") {
     filtered = products.filter((item) =>
-    activeFilter === "mugs"
+      activeFilter === "mugs"
         ? item.itemType === "mug" && item
         : item.itemType === "shirt" && item
     );

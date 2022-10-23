@@ -18,7 +18,7 @@ export const itemsSlice = createSlice({
       activeFilter: "all",
       selectedBrands: [],
       selectedTags: [],
-      isChecked: false
+      isChecked: false,
     },
     status: "idle",
     error: null,
@@ -28,11 +28,16 @@ export const itemsSlice = createSlice({
       state.filteredItems.activeFilter = action.payload;
     },
     selectedBrandValues: (state, action) => {
-      state.filteredItems.selectedBrands = action.payload
+      state.filteredItems.selectedBrands = action.payload;
     },
     filterByTags: (state, action) => {
-      state.filteredItems.selectedTags = [action.payload, ...state.filteredItems.selectedTags]
-      state.products = state.products.filter((item) => item.tags.includes(action.payload))
+      state.filteredItems.selectedTags = [
+        action.payload,
+        ...state.filteredItems.selectedTags,
+      ];
+      state.products = state.products.filter((item) =>
+        item.tags.includes(action.payload)
+      );
     },
   },
   extraReducers: {
@@ -58,7 +63,7 @@ export const itemsSlice = createSlice({
         };
       }, new Map());
       const newTagsList = Object.entries(slicedTags);
-      const uniqueList = [...new Set(newTagsList)]
+      const uniqueList = [...new Set(newTagsList)];
       state.tags = uniqueList;
 
       // let group = "tags"
@@ -146,5 +151,6 @@ export const itemsSlice = createSlice({
   },
 });
 
-export const { changeActiveFilter, selectedBrandValues, filterByTags } = itemsSlice.actions;
+export const { changeActiveFilter, selectedBrandValues, filterByTags } =
+  itemsSlice.actions;
 export default itemsSlice.reducer;

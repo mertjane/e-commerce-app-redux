@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import check from "..//..//..//assets/checked1.png"
+import check from "..//..//..//assets/checked1.png";
+
+export const media = {
+  mobile: `@media only screen and (max-width: 768px)`,
+};
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -16,6 +20,11 @@ export const Wrapper = styled.section`
   flex-direction: column;
   /* Grayscale / 500 */
   color: #697488;
+  ${media.mobile} {
+    padding-left: 10px;
+    font-size: 7px;
+    gap: 4px;
+  }
 `;
 
 export const StyledForm = styled.div`
@@ -26,6 +35,9 @@ export const StyledForm = styled.div`
   background: #ffffff;
   box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
   border-radius: 2px;
+  ${media.mobile} {
+    width: 100px;
+  }
 `;
 
 export const StyledSearchBar = styled.input`
@@ -42,11 +54,21 @@ export const StyledSearchBar = styled.input`
     /* identical to box height, or 171% */
     color: #a8a8a8;
     /* Black / 300 */
+    ${media.mobile} {
+      font-size: 7px;
+    }
   }
   border-radius: 2px;
   align-self: center;
   padding-left: 1rem;
   margin-top: 1rem;
+  ${media.mobile} {
+    padding-left: 8px;
+    font-size: 8px;
+    width: 16vw;
+    height: 4vh;
+    margin-top: 0.7rem;
+  }
 `;
 export const FilterBox = styled.div`
   width: 14vw;
@@ -57,14 +79,25 @@ export const FilterBox = styled.div`
   overflow-y: scroll;
   row-gap: 1rem;
   padding-top: 0.5rem;
+  ${media.mobile} {
+    height: 70%;
+    width: 16vw;
+  }
   &::-webkit-scrollbar {
-        width: 7px;
+    width: 7px;
+    ${media.mobile} {
+      width: 4px;
+      height: 4px;
     }
-    &::-webkit-scrollbar-thumb {
-      background:#E0E0E0;
-      border-radius: 2px;
-      height: 70px;
-}
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 2px;
+    height: 70px;
+    ${media.mobile} {
+      height: 40px;
+    }
+  }
 `;
 
 export const Group = styled.div`
@@ -75,6 +108,18 @@ export const Group = styled.div`
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  ${media.mobile} {
+    width: 100%;
+    gap: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  div {
+    ${media.mobile} {
+      margin-left: -10px;
+    }
+  }
 `;
 
 export const StyledLabel = styled.label`
@@ -84,6 +129,10 @@ export const StyledLabel = styled.label`
   border-radius: 2px;
   width: 22px;
   height: 22px;
+  ${media.mobile} {
+    width: 14px;
+    height: 14px;
+  }
 `;
 export const SelectAll = styled.input`
   opacity: -1;
@@ -105,10 +154,14 @@ export const SelectAll = styled.input`
     border: 1px solid #1ea4ce;
   }
   &:checked + ${StyledLabel} {
-    background:#1ea4ce;
+    background: #1ea4ce;
     border: 1px solid #1ea4ce;
     &::after {
       content: url(${check});
+      ${media.mobile} {
+        left: 0px;
+        bottom: 1px;
+      }
       position: relative;
       left: 4px;
       display: block;
@@ -139,10 +192,13 @@ export const SecondaryChkBox = styled.input`
     border: 1px solid #1ea4ce;
   }
   &:checked + ${StyledLabel} {
-    background:#1ea4ce;
+    background: #1ea4ce;
     border: 1px solid #1ea4ce;
     &::after {
       content: url(${check});
+      ${media.mobile} {
+        left: 1.3px;
+      }
       position: relative;
       left: 4px;
       display: block;
@@ -164,4 +220,7 @@ export const FilterText = styled.p`
   letter-spacing: 0.16px;
   /* Black / 300 */
   color: #a8a8a8;
+  ${media.mobile} {
+    font-size: 7px;
+  }
 `;

@@ -1,8 +1,8 @@
 import React from "react";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../redux/cart/cartSlice";
-import mug from "..//..//..//assets/mug.png"
-import shirt from "..//..//..//assets/shirt.png"
+import mug from "..//..//..//assets/mug.png";
+import shirt from "..//..//..//assets/shirt.png";
 import {
   CardWrapper,
   ImgBox,
@@ -14,7 +14,9 @@ import {
 } from "./Card.styled";
 
 const Card = ({ filtered }) => {
-  const activeFilter = useSelector((state) => state.items.filteredItems.activeFilter);
+  const activeFilter = useSelector(
+    (state) => state.items.filteredItems.activeFilter
+  );
   const dispatch = useDispatch();
   return (
     <>
@@ -22,7 +24,7 @@ const Card = ({ filtered }) => {
         return (
           <CardWrapper key={item.added}>
             <ImgBox>
-              <Img src={activeFilter === "shirts" ? shirt : mug}/>
+              <Img src={activeFilter === "shirts" ? shirt : mug} />
             </ImgBox>
             <CardInfo>
               <Cost>₺ {item.price}</Cost>

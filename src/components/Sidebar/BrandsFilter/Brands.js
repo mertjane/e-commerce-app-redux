@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getProductsAsync, filterByBrandsAsync } from "../../../redux/items/Services";
+import {
+  getProductsAsync,
+  filterByBrandsAsync,
+} from "../../../redux/items/Services";
 import { selectedBrandValues } from "../../../redux/items/itemsSlice";
 import Loading from "../../Loading/Loading";
 import Error from "../../Error/Error";

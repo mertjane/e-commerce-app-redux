@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, decreaseCart } from "../../redux/cart/cartSlice";
 import { getTotals } from "../../redux/cart/cartSlice";
@@ -18,6 +18,7 @@ import {
   ResultText,
 } from "./Cart.styled";
 import { FaMinus, FaPlus } from "react-icons/fa";
+
 const controlStyle = {
   color: "#1EA4CE",
   size: "15",
@@ -27,10 +28,10 @@ const controlStyle = {
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  
+
   useEffect(() => {
-    dispatch(getTotals())
-  }, [cart, dispatch])
+    dispatch(getTotals());
+  }, [cart, dispatch]);
 
   return (
     <CartWrapper>
@@ -49,7 +50,9 @@ const Cart = () => {
                     <ItemPrice>₺ {cartItem.price}</ItemPrice>
                   </ItemInfo>
                   <CounterBox>
-                    <DecrementBtn onClick={() => dispatch(decreaseCart(cartItem))}>
+                    <DecrementBtn
+                      onClick={() => dispatch(decreaseCart(cartItem))}
+                    >
                       <FaMinus style={controlStyle} />
                     </DecrementBtn>
                     <Number>{cartItem.cartQuantity}</Number>
@@ -64,7 +67,7 @@ const Cart = () => {
           })
         )}
         <TotalBox>
-          <ResultText>₺ {cart.cartTotalAmount.toFixed(2)}</ResultText>  
+          <ResultText>₺ {cart.cartTotalAmount.toFixed(2)}</ResultText>
         </TotalBox>
       </CartBox>
     </CartWrapper>

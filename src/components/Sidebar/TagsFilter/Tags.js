@@ -20,7 +20,7 @@ const Tags = () => {
   const dispatch = useDispatch();
   const tags = useSelector((state) => state.items.tags);
   const status = useSelector((state) => state.items.status);
-  
+
   const [searchTags, setSearchTags] = useState("");
 
   return (

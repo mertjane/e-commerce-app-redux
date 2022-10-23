@@ -10,7 +10,9 @@ import {
 
 const ItemTypes = () => {
   const dispatch = useDispatch();
-  const activeFilter = useSelector((state) => state.items.filteredItems.activeFilter);
+  const activeFilter = useSelector(
+    (state) => state.items.filteredItems.activeFilter
+  );
   return (
     <NavWrapper>
       <NavTitle>Products</NavTitle>

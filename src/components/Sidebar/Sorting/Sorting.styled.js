@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import check from "..//..//..//assets/checked.png";
 
+export const media = {
+  mobile: `@media only screen and (max-width: 768px)`,
+};
+
 export const Wrapper = styled.section`
   width: 100%;
   padding-left: 110px;
@@ -16,6 +20,11 @@ export const Wrapper = styled.section`
   flex-direction: column;
   /* Grayscale / 500 */
   color: #697488;
+  ${media.mobile} {
+    padding-left: 10px;
+    font-size: 7px;
+    gap: 4px;
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -26,6 +35,9 @@ export const StyledForm = styled.form`
   background: #ffffff;
   box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
   border-radius: 2px;
+  ${media.mobile} {
+    width: 100px;
+  }
 `;
 
 export const Group = styled.div`
@@ -36,18 +48,31 @@ export const Group = styled.div`
   box-sizing: border-box;
   position: relative;
   gap: 0.4rem;
+  div {
+    ${media.mobile} {
+      width: 100%;
+    }
+  }
   padding-left: 1.7rem;
   padding-top: 1.7rem;
+  ${media.mobile} {
+    padding-left: 5px;
+  }
 `;
 
 export const RadioButtonLabel = styled.label`
   position: absolute;
   background: #ffffff;
-  border: 2px solid #DFDEE2;
+  border: 2px solid #dfdee2;
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  ${media.mobile} {
+    width: 18px;
+    height: 18px;
+  }
 `;
+
 export const SortCheckBox = styled.input`
   opacity: -1;
   z-index: 1;
@@ -71,6 +96,10 @@ export const SortCheckBox = styled.input`
     border: 2px solid #1ea4ce;
     &::after {
       content: url(${check});
+      ${media.mobile} {
+        top: 0.5px;
+        left: 1.3px;
+      }
       position: relative;
       left: 4px;
       display: block;

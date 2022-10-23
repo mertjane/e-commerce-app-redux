@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterWrapper } from "./Footer.styled";
 import { BsDot } from "react-icons/bs";
+
 const dotStyle = {
   display: "flex",
   alignSelf: "flex-start",

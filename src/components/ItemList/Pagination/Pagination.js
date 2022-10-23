@@ -24,7 +24,7 @@ const Pagination = ({
   prevPage,
   maxPageNumberLimit,
   minPageNumberLimit,
-  currentPage
+  currentPage,
 }) => {
   const pageNumbers = [];
 
@@ -33,13 +33,13 @@ const Pagination = ({
   }
 
   let pageIncrementBtn = null;
-  if(maxPageNumberLimit < 109) {
-    pageIncrementBtn = <Pages onClick={nextPage}>...</Pages>
+  if (maxPageNumberLimit < 109) {
+    pageIncrementBtn = <Pages onClick={nextPage}>...</Pages>;
   }
 
   let pageDecrementBtn = null;
-  if(minPageNumberLimit >= 1) {
-    pageDecrementBtn = <Pages onClick={prevPage}>...</Pages>
+  if (minPageNumberLimit >= 1) {
+    pageDecrementBtn = <Pages onClick={prevPage}>...</Pages>;
   }
 
   return (
@@ -54,13 +54,12 @@ const Pagination = ({
           (number) =>
             number < maxPageNumberLimit + 1 &&
             number > minPageNumberLimit && (
-              <Pages active={currentPage === number ? "active" : null}
+              <Pages
+                active={currentPage === number ? "active" : null}
                 onClick={() => paginate(number)}
                 key={number}
               >
-                
                 {number}
-                
               </Pages>
             )
         )}

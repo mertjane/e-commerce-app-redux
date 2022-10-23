@@ -5,7 +5,7 @@ import {
   StyledForm,
   Group,
   SortCheckBox,
-  RadioButtonLabel
+  RadioButtonLabel,
 } from "./Sorting.styled";
 import {
   sortLowToHighAsync,
@@ -28,7 +28,7 @@ const Sorting = () => {
             value="lowToHigh"
             name="sorting"
           />
-          <RadioButtonLabel htmlFor="lowToHigh"/>
+          <RadioButtonLabel htmlFor="lowToHigh" />
           <div>Price low to high</div>
         </Group>
         <Group>
@@ -38,7 +38,7 @@ const Sorting = () => {
             value="highToLow"
             name="sorting"
           />
-          <RadioButtonLabel htmlFor="HighToLow"/>
+          <RadioButtonLabel htmlFor="HighToLow" />
           <div>Price high to low</div>
         </Group>
         <Group>
@@ -48,7 +48,7 @@ const Sorting = () => {
             value="newToOld"
             name="sorting"
           />
-          <RadioButtonLabel htmlFor="NewToOld"/>
+          <RadioButtonLabel htmlFor="NewToOld" />
           <div>New to old</div>
         </Group>
         <Group>
@@ -58,7 +58,7 @@ const Sorting = () => {
             value="odToNew"
             name="sorting"
           />
-          <RadioButtonLabel htmlFor="oldToNew"/>
+          <RadioButtonLabel htmlFor="oldToNew" />
           <div>Old to new</div>
         </Group>
       </StyledForm>
