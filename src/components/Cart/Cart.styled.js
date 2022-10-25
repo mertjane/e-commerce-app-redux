@@ -4,21 +4,6 @@ export const media = {
   mobile: `@media only screen and (max-width: 768px)`,
 };
 
-export const CartWrapper = styled.section`
-  width: 25%;
-  height: 1480px;
-  padding-right: 140px;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  ${media.mobile} {
-    width: 30%;
-    height: 100%;
-    padding-right: 10px;
-  }
-`;
-
 export const CartBox = styled.div`
   width: 15.41vw;
   min-height: 36.09vh;
@@ -32,14 +17,17 @@ export const CartBox = styled.div`
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   ${media.mobile} {
-    width: 110px;
+    width: 100%;
+    padding: 2px;
+    min-height: 90px;
+    border: 2px solid #1ea4ce;
+    gap: 2px;
   }
   p {
     ${media.mobile} {
-      font-size: 8px;
+      font-size: 6px;
       text-align: center;
-      padding-left: 4px;
-      padding-right: 4px;
+      padding: 2px;
     }
   }
 `;
@@ -51,15 +39,21 @@ export const ItemBox = styled.div`
   border-radius: 2px;
   ${media.mobile} {
     width: 100%;
-    padding-left: 2px;
-    padding-right: 2px;
-    display: flex;
-    align-items: center;
+    height: auto;
+    padding: 0;
   }
 `;
 
 export const ItemInfo = styled.div`
   width: 60%;
+  ${media.mobile} {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `;
 export const ItemName = styled.p`
   font-style: normal;
@@ -95,6 +89,9 @@ export const CounterBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${media.mobile} {
+    width: 25%;
+  }
 `;
 
 export const DecrementBtn = styled.button`
@@ -107,6 +104,16 @@ export const DecrementBtn = styled.button`
   justify-content: center;
   border: none;
   cursor: pointer;
+  .btnIco{
+    color: #1EA4CE;
+    size: 15;
+  }
+  ${media.mobile} {
+    .btnIco{
+    width: 4px;
+    height: 4px;
+  }
+  }
 `;
 export const IncrementBtn = styled.button`
   width: 2rem;
@@ -118,6 +125,16 @@ export const IncrementBtn = styled.button`
   justify-content: center;
   border: none;
   cursor: pointer;
+  .btnIco{
+    color: #1EA4CE;
+    size: 15;
+  }
+  ${media.mobile} {
+    .btnIco{
+    width: 4px;
+    height: 4px;
+  }
+  }
 `;
 export const Number = styled.p`
   width: 1.66vw;
@@ -135,7 +152,7 @@ export const Number = styled.p`
   ${media.mobile} {
     width: 1.66vw;
     height: 50%;
-    font-size: 11px;
+    font-size: 8px;
     background-color: transparent;
     color: #1ea4ce;
   }
@@ -153,6 +170,9 @@ export const TotalBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${media.mobile} {
+    
+  }
 `;
 export const ResultText = styled.p`
   width: 4.79vw;
@@ -167,7 +187,8 @@ export const ResultText = styled.p`
   color: #1ea4ce;
   ${media.mobile} {
     width: 9vw;
-    height: 4vh;
-    font-size: 11px;
+    height: 3vh;
+    font-size: 10px;
+    border: 1px solid #1ea4ce;
   }
 `;

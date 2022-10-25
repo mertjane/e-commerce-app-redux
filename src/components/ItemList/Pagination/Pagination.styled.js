@@ -11,6 +11,9 @@ export const PaginationWrapper = styled.nav`
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
+  ${media.mobile} {
+    height: auto;
+  }
 `;
 
 export const ControlBox = styled.div`
@@ -42,8 +45,9 @@ export const PrevBtn = styled.button`
   cursor: pointer;
   gap: 0.5rem;
   ${media.mobile} {
-    font-size: 10px;
-    gap: 0.2rem;
+    width: 20%;
+    font-size: 6px;
+    gap: 0rem;
   }
 `;
 export const Pages = styled.button`
@@ -68,8 +72,8 @@ export const Pages = styled.button`
     color: white;
   `}
   ${media.mobile} {
-    font-size: 8px;
-    height: 50%;
+    font-size: 6px;
+    height: 40%;
   }
 `;
 export const NextBtn = styled.button`
@@ -93,7 +97,8 @@ export const NextBtn = styled.button`
   color: #1ea4ce;
   gap: 0.5rem;
   ${media.mobile} {
-    font-size: 10px;
-    gap: 0.2rem;
+    width: 20%;
+    font-size: 6px;
+    gap: 0rem;
   }
 `;

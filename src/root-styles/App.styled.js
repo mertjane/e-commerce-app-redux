@@ -10,18 +10,34 @@ export const MainWrapper = styled.section`
   display: flex;
   background: #e5e5e5;
   ${media.mobile} {
-    height: auto;
+    width: 100%;
+    height: 587px;
   }
 `;
 export const SideBarWrapper = styled.section`
-  width: 25%;
+  width: 30%;
   height: 1480px;
   background: #e5e5e5;
   display: flex;
   flex-direction: column;
   ${media.mobile} {
-    width: 30%;
+    width: 20%;
     height: 100%;
-    padding-left: 10px;
+    padding: 18px 4px 0 4px;
+  }
+`;
+
+export const CartWrapper = styled.section`
+  width: 30%;
+  height: 1480px;
+  padding-right: 140px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  ${media.mobile} {
+    width: 20%;
+    height: 100%;
+    padding: 18px 4px 0 4px;
   }
 `;

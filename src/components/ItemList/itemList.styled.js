@@ -5,12 +5,13 @@ export const media = {
 };
 
 export const ListWrapper = styled.section`
-  width: 50%;
+  width: 60%;
   height: 1480px;
   padding-top: 22px;
   ${media.mobile} {
-    width: 45%;
-    height: auto;
+    width: 60%;
+    height: 100%;
+    padding-top: 0;
   }
 `;
 
@@ -27,12 +28,12 @@ export const List = styled.div`
   row-gap: 2.5rem;
   column-gap: 1.9rem;
   ${media.mobile} {
-    height: auto;
+    height: 420px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    row-gap: 30px;
-    column-gap: 30px;
-    padding: 20px;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 5px;
+    padding: 2px;
   }
 `;

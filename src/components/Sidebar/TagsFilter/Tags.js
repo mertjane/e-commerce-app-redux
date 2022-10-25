@@ -9,11 +9,9 @@ import {
   StyledForm,
   StyledSearchBar,
   FilterBox,
-  SelectAll,
   Group,
   SecondaryChkBox,
   StyledLabel,
-  FilterText,
 } from "./Tags.styled";
 
 const Tags = () => {
@@ -34,14 +32,13 @@ const Tags = () => {
         />
         <FilterBox>
           <Group>
-            <SelectAll
+            <SecondaryChkBox
               onChange={() => dispatch(getProductsAsync())}
               name="tags"
               type="radio"
             />
             <StyledLabel />
-            <div>All</div>
-            <FilterText>({Object.keys(tags).length})</FilterText>
+            <div>All<span>({Object.keys(tags).length})</span></div>
           </Group>
           {status === "loading" && <Loading />}
           {status === "failed" && <Error />}
@@ -65,8 +62,7 @@ const Tags = () => {
                     name="tags"
                   />
                   <StyledLabel htmlFor={item[0]} />
-                  <div>{item[0]}</div>
-                  <FilterText>({item[1]})</FilterText>
+                  <div>{item[0]}<span>({item[1]})</span></div>
                 </Group>
               );
             })}

@@ -9,9 +9,10 @@ export const CardWrapper = styled.div`
   height: 27vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   ${media.mobile} {
-    width: 14vw;
-    height: 22vh;
+    width: 50px;
+    height: 90px;
   }
 `;
 
@@ -23,14 +24,21 @@ export const ImgBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${media.mobile} {
+    width: 100%;
+    border-radius: 8px;
+    height: 50px;
+  }
 `;
 export const Img = styled.img`
   width: 8vw;
   height: 13vh;
+  padding: 10px;
   background: transparent;
   ${media.mobile} {
-    width: 8vw;
-    height: 9vh;
+    width: 30px;
+    height: 30px;
+    padding: 0;
   }
 `;
 
@@ -42,8 +50,8 @@ export const CardInfo = styled.div`
   gap: 0.5rem;
   padding-top: 1rem;
   ${media.mobile} {
-    gap: 3px;
-    padding-top: 0;
+    gap: 1px;
+    padding: 0;
   }
 `;
 
@@ -55,7 +63,8 @@ export const Cost = styled.p`
   /* or 143% */
   color: #1ea4ce;
   ${media.mobile} {
-    font-size: 10px;
+    font-size: 6px;
+    line-height: 10px;
   }
 `;
 export const Name = styled.p`
@@ -67,8 +76,9 @@ export const Name = styled.p`
   /* Grayscale / 700 */
   color: #191919;
   ${media.mobile} {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 6px;
+    line-height: 5px;
+    height: 15px;
   }
 `;
 export const AddBtn = styled.button`
@@ -88,4 +98,9 @@ export const AddBtn = styled.button`
   /* identical to box height, or 167% */
   color: #ffffff;
   cursor: pointer;
+  ${media.mobile} {
+    height: 14px;
+    font-size: 7px;
+    line-height: 0;
+  }
 `;

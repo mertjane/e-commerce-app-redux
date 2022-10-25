@@ -19,9 +19,21 @@ export const FooterWrapper = styled.footer`
   font-size: 14px;
   line-height: 174%;
   /* identical to box height, or 23px */
-  color: #1ea4ce;
-  ${media.mobile} {
-    font-size: 10px;
-    gap: 0;
+  color: #1ea5ce78;
+  opacity: 4px;
+  .dot{
+    position: relative;
+    top: 5px;
+    color: #1ea5ce78;
   }
+  ${media.mobile} {
+    .dot{
+      position: relative;
+      top: 1px;
+    }
+    font-size: 6px;
+    gap: 0;
+    height: 30px;
+  }
+  
 `;

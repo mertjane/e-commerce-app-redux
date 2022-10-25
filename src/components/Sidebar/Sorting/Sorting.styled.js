@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import check from "..//..//..//assets/checked.png";
+import checkMobile from "..//..//..//assets/mobileCheck.png"
 
 export const media = {
   mobile: `@media only screen and (max-width: 768px)`,
@@ -21,9 +22,11 @@ export const Wrapper = styled.section`
   /* Grayscale / 500 */
   color: #697488;
   ${media.mobile} {
-    padding-left: 10px;
-    font-size: 7px;
-    gap: 4px;
+    height: 120px;
+    padding: 0;
+    font-size: 5px;
+    font-weight: 400;
+    gap: 0px;
   }
 `;
 
@@ -36,7 +39,10 @@ export const StyledForm = styled.form`
   box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
   border-radius: 2px;
   ${media.mobile} {
-    width: 100px;
+    width: 100%;
+    height: 100%;
+    background: none;
+    box-shadow: none;
   }
 `;
 
@@ -48,15 +54,19 @@ export const Group = styled.div`
   box-sizing: border-box;
   position: relative;
   gap: 0.4rem;
-  div {
-    ${media.mobile} {
-      width: 100%;
-    }
-  }
   padding-left: 1.7rem;
   padding-top: 1.7rem;
+    ${media.mobile} {
+      div {
+      width: 120px;
+      height: auto;
+      gap: 0;
+      padding: 0;
+    }
+  }
   ${media.mobile} {
-    padding-left: 5px;
+    padding-left: 0px;
+    padding-top: 0px;
   }
 `;
 
@@ -68,8 +78,8 @@ export const RadioButtonLabel = styled.label`
   width: 24px;
   height: 24px;
   ${media.mobile} {
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
   }
 `;
 
@@ -97,8 +107,9 @@ export const SortCheckBox = styled.input`
     &::after {
       content: url(${check});
       ${media.mobile} {
-        top: 0.5px;
-        left: 1.3px;
+        content: url(${checkMobile});
+        top: -5px;
+        left: 1.5px;
       }
       position: relative;
       left: 4px;

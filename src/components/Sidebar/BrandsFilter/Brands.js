@@ -15,7 +15,6 @@ import {
   Group,
   SecondaryChkBox,
   StyledLabel,
-  FilterText,
 } from "./Brands.styled";
 
 const Brands = () => {
@@ -42,8 +41,9 @@ const Brands = () => {
               name="brands"
             />
             <StyledLabel />
-            <div>All</div>
-            <FilterText>({Object.keys(brands).length})</FilterText>
+            <div>
+              All<span>({Object.keys(brands).length})</span>
+            </div>
           </Group>
           {status === "loading" && <Loading />}
           {status === "failed" && <Error />}
@@ -69,8 +69,10 @@ const Brands = () => {
                     name="brands"
                   />
                   <StyledLabel htmlFor={item[0]} />
-                  <div>{item[0]}</div>
-                  <FilterText>({item[1]})</FilterText>
+                  <div>
+                    {item[0]}
+                    <span>({item[1]})</span>
+                  </div>
                 </Group>
               );
             })}

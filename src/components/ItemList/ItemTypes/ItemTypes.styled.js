@@ -9,9 +9,13 @@ export const NavWrapper = styled.nav`
   height: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  ${media.mobile} {
+    height: auto;
+    padding-bottom: 5px;
+  }
 `;
-export const NavTitle = styled.div`
+export const NavTitle = styled.h2`
   width: auto;
   height: 50%;
   font-style: normal;
@@ -25,8 +29,9 @@ export const NavTitle = styled.div`
   display: flex;
   align-items: center;
   ${media.mobile} {
-    font-size: 14px;
-    height: 40%;
+    font-size: 10px;
+    height: 100%;
+    letter-spacing: 0;
   }
 `;
 export const BtnGroup = styled.div`
@@ -36,7 +41,7 @@ export const BtnGroup = styled.div`
   align-items: center;
   gap: 1rem;
   ${media.mobile} {
-    gap: 12px;
+    gap: 8px;
   }
 `;
 export const SelectionBtn = styled.button`
@@ -65,8 +70,8 @@ export const SelectionBtn = styled.button`
     color: white;
   `}
   ${media.mobile} {
-    width: 8.17vw;
-    height: 3.44vh;
-    font-size: 11px;
+    width: 28px;
+    height: 17px;
+    font-size: 8px;
   }
 `;

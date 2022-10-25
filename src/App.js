@@ -7,7 +7,7 @@ import ItemList from "./components/ItemList/ItemList";
 import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import { MainWrapper } from "./root-styles/App.styled";
-import { SideBarWrapper } from "./root-styles/App.styled";
+import { SideBarWrapper, CartWrapper } from "./root-styles/App.styled";
 import "./App.css";
 
 function App() {
@@ -21,7 +21,9 @@ function App() {
           <Tags />
         </SideBarWrapper>
         <ItemList />
-        <Cart />
+        <CartWrapper>
+          <Cart />
+        </CartWrapper>
       </MainWrapper>
       <Footer />
     </>
